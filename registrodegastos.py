@@ -12,7 +12,7 @@ DATA_FILE = "mis_gastos.csv"
 categorias = {
     "Fijos": ["Luz", "Agua", "Gas", "Internet", "Streaming", "Pastilla de mamá", 
               "Pensión mamá (Adelantada)", "Préstamo banco", "Celular", "Mantenimiento"],
-    "Variables": ["Comida", "Pasajes", "Gustos", "Artículos de limpieza", "Pago Tarjeta de Crédito"]
+    "Variables": ["Comida", "Pasajes", "Gustos", "Artículos de limpieza","pagos Municipalidad","Pago Tarjeta de Crédito"]
 }
 
 # --- FUNCIONES AUXILIARES ---
