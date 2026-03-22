@@ -50,6 +50,11 @@ with tab_reg:
             st.success("Registrado correctamente")
             st.rerun()
 
+st.subheader("Historial Reciente")
+        st.dataframe(df_actual.sort_values(by="Fecha", ascending=False), use_container_width=True)
+    else:
+        st.info("Agrega datos para ver el dashboard.")
+
 # --- TAB 2: DASHBOARD ---
 with tab_dash:
     if not df_actual.empty:
