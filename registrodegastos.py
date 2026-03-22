@@ -22,7 +22,7 @@ def cargar_datos():
 
 df_actual = cargar_datos()
 
-st.title("💰 Mi Gestor de Gastos")
+st.title("💰 Mi Registro de Gastos Javier")
 
 # Métricas rápidas
 total_gastado = df_actual["Monto"].sum() if not df_actual.empty else 0.0
@@ -83,3 +83,23 @@ with st.expander("⚙️ Opciones de sistema"):
         if os.path.exists(DATA_FILE):
             os.remove(DATA_FILE)
             st.rerun()
+# --- TAB 2: DASHBOARD ---
+with tab_dash:
+    if not df_actual.empty:
+        col_d1, col_d2 = st.columns(2)
+        
+        with col_d1:
+            st.subheader("Distribución por Tipo")
+            # Gráfico de pastel
+            fig_tipo = df_actual.groupby("Tipo")["Monto"].sum()
+            st.bar_chart(fig_tipo)
+            
+        with col_d2:
+            st.subheader("Gastos por Subcategoría")
+            fig_sub = df_actual.groupby("Subcategoría")["Monto"].sum().sort_values()
+            st.bar_chart(fig_sub)
+            
+        st.subheader("Historial Reciente")
+        st.dataframe(df_actual.sort_values(by="Fecha", ascending=False), use_container_width=True)
+    else:
+        st.info("Agrega datos para ver el dashboard.")
