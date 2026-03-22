@@ -25,7 +25,7 @@ df_actual = cargar_datos()
 # --- TÍTULO Y MÉTRICAS ---
 st.title("📊 Dashboard & Gestión de Gastos")
 total_gastado = df_actual["Monto"].sum() if not df_actual.empty else 0.0
-st.metric("Gasto Total Acumulado", f"${total_gastado:,.2f}")
+st.metric("Gasto Total Acumulado", f"S./ {total_gastado:,.2f}")
 
 # --- PESTAÑAS PARA ORGANIZAR ---
 tab_reg, tab_dash, tab_edit = st.tabs(["📝 Registrar", "📈 Dashboard", "✏️ Editar/Borrar"])
