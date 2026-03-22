@@ -27,7 +27,7 @@ total_gastado = df_actual["Monto"].sum() if not df_actual.empty else 0.0
 
 st.title("💰 Mi Gestor de Gastos Detallado")
 col_m1, col_m2 = st.columns(2)
-col_m1.metric("Total Gastado Histórico", f"${total_gastado:,.2f}")
+col_m1.metric("Total Gastado Histórico", f"S./ {total_gastado:,.2f}")
 col_m2.metric("Registros Totales", len(df_actual))
 
 st.markdown("---")
