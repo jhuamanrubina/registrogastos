@@ -9,7 +9,7 @@ DATA_FILE = "mis_gastos.csv"
 
 categorias = {
     "Fijos": ["Luz", "Agua", "Gas", "Internet", "Streaming", "Pastilla de mamá", 
-              "Pensión mamá (Adelantada)", "Préstamo banco", "Celular", "Mantenimiento"],
+              "Pensión mamá (Adelantada)", "Préstamo banco", "Celular", "Mantenimiento", "Comida", "Pasajes", "Gustos", "Artículos de limpieza", "Pago Tarjeta de Créd],
     "Variables": ["Comida", "Pasajes", "Gustos", "Artículos de limpieza", "Pago Tarjeta de Crédito"]
 }
 
