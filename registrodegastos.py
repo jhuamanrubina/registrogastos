@@ -10,7 +10,7 @@ DATA_FILE = "mis_gastos.csv"
 
 # Definición de categorías
 categorias = {
-    "Fijos": ["Luz", "Agua", "Gas", "Internet", "Streaming", "Pastilla de mamá", 
+    "Fijos": ["Servicios", "Gas", "Internet", "Streaming", "Pastilla de mamá", 
               "Pensión mamá (Adelantada)", "Préstamo banco", "Celular", "Mantenimiento"],
     "Variables": ["Comida", "Pasajes", "Gustos", "Artículos de limpieza","pagos Municipalidad","Pago Tarjeta de Crédito"]
 }
